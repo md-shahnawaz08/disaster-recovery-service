@@ -1,0 +1,84 @@
+.timeline-container {
+  padding: 0.5rem 1rem;
+
+  .scale-container {
+    height: 10rem;
+    width: 100%;
+    border: 1px solid lightgray;
+    overflow-x: scroll;
+
+    .scale {
+      height: 7.2rem;
+      width: 100%;
+      background: whitesmoke;
+      position: relative;
+      padding: 0 2rem;
+
+      .line {
+        padding: 3.6rem 0.4px;
+        background-color: lightgray;
+        display: inline-block;
+        position: absolute;
+        left: 2rem;
+      }
+
+      .dashed {
+        padding: 3.6rem 0px;
+        border-left: 0.6px dashed lightgray;
+        background-color: unset;
+      }
+
+      .daily {
+        padding: 0.6rem;
+        background-color: skyblue;
+        display: inline-block;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 1.2rem;
+      }
+
+      .hourly {
+        padding: 0.6rem;
+        background-color: blue;
+        display: inline-block;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 2.4rem;
+      }
+
+      .minutely {
+        padding: 0.6rem;
+        background-color: blueviolet;
+        display: inline-block;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 4.8rem;
+      }
+
+      .manual {
+        padding: 0.6rem;
+        background-color: orange;
+        display: inline-block;
+        position: absolute;
+        left: 1.5rem;
+        bottom: 3.6rem;
+      }
+
+      .failed {
+        background-color: red;
+        padding: 0.01rem 0.5rem;
+        z-index: 1;
+      }
+    }
+
+    .times {
+      white-space: nowrap;
+
+      .time {
+        display: inline-block;
+        width: 4rem;
+        text-align: center;
+      }
+    }
+  }
+}

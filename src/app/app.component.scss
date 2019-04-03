@@ -1,0 +1,43 @@
+.timeline-slider {
+  background: white;
+  margin: 2rem 1rem;
+
+  .date-picker {
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .types {
+    padding: 0.5rem 1rem;
+
+    .type {
+      padding-right: 1rem;
+      display: inline-block;
+
+      .dot {
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.3rem;
+      }
+
+      .daily {
+        background-color: skyblue;
+
+      }
+
+      .hourly {
+        background-color: blue;
+      }
+
+      .minutely {
+        background-color: blueviolet;
+      }
+
+      .manual {
+        background-color: orange;
+      }
+    }
+  }
+}

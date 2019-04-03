@@ -1,0 +1,27 @@
+<div class="timeline-container">
+  <div class="scale-container">
+    <div class="scale" [ngStyle]="{'width.rem': 96*span}">
+      <div class="line" *ngFor="let time of times; index as i" [ngStyle]="{'left.rem': 2+4*i}"></div>
+      <div class="line dashed" *ngFor="let time of times; index as i" [ngStyle]="{'left.rem': 4+4*i}"></div>
+      <div class="daily" *ngFor="let snap of daily" [title]="snap.status"
+        [ngStyle]="{'left.rem': 1.5+((snap.timestamp-start)/(3600*1000)*4)}"
+        [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
+      </div>
+      <div class="minutely" *ngFor="let snap of minutely" [title]="snap.status"
+        [ngStyle]="{'left.rem': 1.5+((snap.timestamp-start)/(3600*1000)*4)}"
+        [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
+      </div>
+      <div class="hourly" *ngFor="let snap of hourly" [title]="snap.status"
+        [ngStyle]="{'left.rem': 1.5+((snap.timestamp-start)/(3600*1000)*4)}"
+        [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
+      </div>
+      <div class="manual" *ngFor="let snap of manual" [title]="snap.status"
+        [ngStyle]="{'left.rem': 1.5+((snap.timestamp-start)/(3600*1000)*4)}"
+        [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
+      </div>
+    </div>
+    <div class="times">
+      <span class="time" *ngFor="let time of times">{{time}}</span>
+    </div>
+  </div>
+</div>
