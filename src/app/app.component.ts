@@ -23,13 +23,13 @@ export class AppComponent {
 
   changeDate() {
     console.log(this.rangeDates);
-    const start = this.rangeDates[0];
-    const end = this.rangeDates[1];
-    if (start && end) {
-      this.snapshotService.getSnapshots(start.getTime(), end.getTime()).subscribe((data: ICapture[]) => {
+    if (this.rangeDates[1]) {
+      const start = this.rangeDates[0].getTime();
+      const end = this.rangeDates[1].getTime() + 24 * 3600 * 1000;
+      this.snapshotService.getSnapshots(start, end).subscribe((data: ICapture[]) => {
         console.log(data);
-        this.start = start.getTime();
-        this.end = end.getTime();
+        this.start = start;
+        this.end = end;
         this.span = (this.end - this.start) / (3600 * 24 * 1000);
         _.forEach(data, capture => {
           switch (capture.frequency) {

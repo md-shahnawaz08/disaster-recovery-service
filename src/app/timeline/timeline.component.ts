@@ -24,4 +24,12 @@ export class TimelineComponent implements OnChanges {
       }
     }
   }
+
+  scrollToLeft(elem: Element) {
+    elem.scrollLeft -= 200;
+  }
+
+  scrollToRight(elem: Element) {
+    elem.scrollLeft += 200;
+  }
 }
