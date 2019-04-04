@@ -8,7 +8,6 @@ import timeConstants from '../constants/times';
 })
 export class TimelineComponent implements OnChanges {
   @Input() start = 0;
-  @Input() end = 0;
   @Input() span = 0;
   @Input() daily: ISnapshot[] = [];
   @Input() hourly: ISnapshot[] = [];
@@ -26,10 +25,10 @@ export class TimelineComponent implements OnChanges {
   }
 
   scrollToLeft(elem: Element) {
-    elem.scrollLeft -= 200;
+    elem.scrollLeft -= 240;
   }
 
   scrollToRight(elem: Element) {
-    elem.scrollLeft += 200;
+    elem.scrollLeft += 240;
   }
 }

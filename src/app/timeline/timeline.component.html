@@ -20,14 +20,15 @@
         [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
       </div>
     </div>
-    <div class="button-left">
+    <div *ngIf="start" class="button-left">
       <i class="pi pi-chevron-circle-left left-btn" (click)="scrollToLeft(scroll)"></i>
     </div>
-    <div class="button-right">
+    <div *ngIf="start" class="button-right">
       <i class="pi pi-chevron-circle-right right-btn" (click)="scrollToRight(scroll)"></i>
     </div>
     <div class="times">
       <span class="time" *ngFor="let time of times">{{time}}</span>
     </div>
   </div>
+  <div *ngIf="start" class="date">{{start + (scroll.scrollLeft/80)*3600*1000| date: 'MMM d'}}</div>
 </div>

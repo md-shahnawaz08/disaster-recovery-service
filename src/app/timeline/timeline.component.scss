@@ -2,9 +2,8 @@
   padding: 0.5rem 1rem;
 
   .scale-container {
-    height: 10rem;
+    height: 9rem;
     width: 100%;
-    border: 1px solid lightgray;
     overflow-x: hidden;
     position: relative;
 
@@ -103,5 +102,12 @@
         text-align: center;
       }
     }
+  }
+
+  .date {
+    margin-left: 1rem;
+    background: whitesmoke;
+    width: 36px;
+    padding: 2px;
   }
 }

@@ -22,12 +22,10 @@ export class AppComponent {
   constructor(private snapshotService: SnapshotService) { }
 
   changeDate() {
-    console.log(this.rangeDates);
     if (this.rangeDates[1]) {
       const start = this.rangeDates[0].getTime();
       const end = this.rangeDates[1].getTime() + 24 * 3600 * 1000;
       this.snapshotService.getSnapshots(start, end).subscribe((data: ICapture[]) => {
-        console.log(data);
         this.start = start;
         this.end = end;
         this.span = (this.end - this.start) / (3600 * 24 * 1000);
