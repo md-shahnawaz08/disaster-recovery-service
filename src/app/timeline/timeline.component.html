@@ -30,5 +30,5 @@
       <span class="time" *ngFor="let time of times">{{time}}</span>
     </div>
   </div>
-  <div *ngIf="start" class="date">{{start + (scroll.scrollLeft/80)*3600*1000| date: 'MMM d'}}</div>
+  <span *ngIf="start" class="date">{{start + (scroll.scrollLeft/80)*3600*1000| date: 'MMM d'}}</span>
 </div>
