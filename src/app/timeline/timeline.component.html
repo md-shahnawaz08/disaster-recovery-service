@@ -3,19 +3,19 @@
     <div class="scale" [ngStyle]="{'width.px': 1920*span+40}">
       <div class="line" *ngFor="let time of times; index as i" [ngStyle]="{'left.px': 40+80*i}"></div>
       <div class="line dashed" *ngFor="let time of times; index as i" [ngStyle]="{'left.px': 80+80*i}"></div>
-      <div class="daily" *ngFor="let snap of daily" [title]="snap.status"
+      <div class="daily" *ngFor="let snap of daily" [pTooltip]="snap.status" tooltipPosition="top"
         [ngStyle]="{'left.px': 32+((snap.timestamp-start)/(3600*1000)*80)}"
         [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
       </div>
-      <div class="minutely" *ngFor="let snap of minutely" [title]="snap.status"
+      <div class="minutely" *ngFor="let snap of minutely" [pTooltip]="snap.status" tooltipPosition="top"
         [ngStyle]="{'left.px': 32+((snap.timestamp-start)/(3600*1000)*80)}"
         [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
       </div>
-      <div class="hourly" *ngFor="let snap of hourly" [title]="snap.status"
+      <div class="hourly" *ngFor="let snap of hourly" [pTooltip]="snap.status" tooltipPosition="top"
         [ngStyle]="{'left.px': 32+((snap.timestamp-start)/(3600*1000)*80)}"
         [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
       </div>
-      <div class="manual" *ngFor="let snap of manual" [title]="snap.status"
+      <div class="manual" *ngFor="let snap of manual" [pTooltip]="snap.status" tooltipPosition="top"
         [ngStyle]="{'left.px': 32+((snap.timestamp-start)/(3600*1000)*80)}"
         [ngClass]="{'failed': snap.status==='failed'}">{{snap.status==='failed' ? '!' : ''}}
       </div>

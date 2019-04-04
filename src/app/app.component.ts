@@ -18,6 +18,7 @@ export class AppComponent {
   start: number;
   end: number;
   span: number;
+  isLoading = false;
 
   constructor(private snapshotService: SnapshotService) { }
 
@@ -25,6 +26,7 @@ export class AppComponent {
     if (this.rangeDates[1]) {
       const start = this.rangeDates[0].getTime();
       const end = this.rangeDates[1].getTime() + 24 * 3600 * 1000;
+      this.isLoading = true;
       this.snapshotService.getSnapshots(start, end).subscribe((data: ICapture[]) => {
         this.start = start;
         this.end = end;
@@ -46,6 +48,10 @@ export class AppComponent {
             }
           }
         });
+        this.isLoading = false;
+      }, error => {
+        this.isLoading = false;
+        console.error(error);
       });
     }
   }

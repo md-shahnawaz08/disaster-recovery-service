@@ -15,3 +15,7 @@
   <app-timeline [start]="start" [span]="span" [daily]="daily" [hourly]="hourly" [minutely]="minutely" [manual]="manual">
   </app-timeline>
 </div>
+
+<div class="loader" *ngIf="isLoading">
+  <p-progressSpinner></p-progressSpinner>
+</div>

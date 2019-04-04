@@ -6,6 +6,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TimelineComponent } from './timeline/timeline.component';
     HttpClientModule,
     CalendarModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ProgressSpinnerModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

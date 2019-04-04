@@ -17,7 +17,7 @@ export class TimelineComponent implements OnChanges {
   times: string[] = [];
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.span.currentValue) {
+    if (changes.span && changes.span.currentValue) {
       for (let i = 0; i < changes.span.currentValue; i++) {
         this.times = this.times.concat(timeConstants);
       }

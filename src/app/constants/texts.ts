@@ -1,5 +1,5 @@
 export default {
-    CHANGE_DATE: 'Change Date',
+    CHANGE_DATE: 'Change Date ▼',
     DAILY: 'Daily',
     HOURLY: 'Hourly',
     MINUTELY: 'Minutely',
