@@ -78,6 +78,11 @@
         position: fixed;
         color: #007ad9;
         font-size: x-large;
+        z-index: 10;
+      }
+
+      .left-btn:hover {
+        color: lighten(#007ad9, 10%)
       }
     }
 
@@ -90,6 +95,11 @@
         position: fixed;
         color: #007ad9;
         font-size: x-large;
+        z-index: 10;
+      }
+
+      .right-btn:hover {
+        color: lighten(#007ad9, 10%)
       }
     }
 
